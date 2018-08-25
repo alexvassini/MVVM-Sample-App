@@ -14,9 +14,8 @@ class AppCoordinator: Coordinator {
     
     let window: UIWindow
     let container: Container
-    //var storage: LocalStorage
-   // var notifications: NotificationHelper
-    
+   
+
     var currentView: UIViewController? {
         get {
             return window.rootViewController
@@ -36,14 +35,20 @@ class AppCoordinator: Coordinator {
     
     func start() {
        
-        showMainView()
+        showHomeView()
     }
     
-    fileprivate func showMainView(){
-       
+    fileprivate func showHomeView(){
+        let view = container.resolve(HomeView.self)!
+        view.delegate = self
+        self.currentView = view
     }
     
     
+}
+
+extension AppCoordinator: HomeViewDelegate {
+
 }
 
 

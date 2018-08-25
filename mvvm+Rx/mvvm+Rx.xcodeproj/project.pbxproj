@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		171A7D697F13048915334A65 /* Pods_mvvm_Rx.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 834B7B1E5F8D0E20A3C81699 /* Pods_mvvm_Rx.framework */; };
+		AC352E342130C57900C7FC6C /* SignInRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC352E322130C57900C7FC6C /* SignInRepositoryImpl.swift */; };
+		AC352E352130C57900C7FC6C /* SignInRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC352E332130C57900C7FC6C /* SignInRepository.swift */; };
+		AC352E3B2130CBEF00C7FC6C /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC352E382130CBEF00C7FC6C /* LoginView.swift */; };
+		AC352E3D2130CBEF00C7FC6C /* LoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC352E3A2130CBEF00C7FC6C /* LoginView.xib */; };
 		AC385080210FD65B00AE5217 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC38507F210FD65B00AE5217 /* AppDelegate.swift */; };
 		AC385082210FD65B00AE5217 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC385081210FD65B00AE5217 /* ViewController.swift */; };
 		AC385085210FD65B00AE5217 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC385083210FD65B00AE5217 /* Main.storyboard */; };
@@ -16,12 +20,22 @@
 		AC385093210FDC7C00AE5217 /* DefaultContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC385092210FDC7C00AE5217 /* DefaultContainer.swift */; };
 		AC385096210FDD5900AE5217 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC385095210FDD5900AE5217 /* Coordinator.swift */; };
 		AC385098210FDD7400AE5217 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC385097210FDD7400AE5217 /* AppCoordinator.swift */; };
+		AC50C063212E371600D9EF34 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC50C060212E371600D9EF34 /* HomeView.swift */; };
+		AC50C064212E371600D9EF34 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC50C061212E371600D9EF34 /* HomeViewModel.swift */; };
+		AC50C065212E371600D9EF34 /* HomeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC50C062212E371600D9EF34 /* HomeView.xib */; };
+		ACE5799C2122506B00359477 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE5799B2122506B00359477 /* AuthService.swift */; };
+		ACE579A02122509900359477 /* AuthRouterImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE5799F2122509900359477 /* AuthRouterImpl.swift */; };
+		ACE579A321225D5900359477 /* RX+NSObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE579A221225D5900359477 /* RX+NSObject.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		432405553F9FCDBA21688C8A /* Pods-mvvm+Rx.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mvvm+Rx.release.xcconfig"; path = "Pods/Target Support Files/Pods-mvvm+Rx/Pods-mvvm+Rx.release.xcconfig"; sourceTree = "<group>"; };
 		587B46FEEFF9C5E29290285A /* Pods-mvvm+Rx.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mvvm+Rx.debug.xcconfig"; path = "Pods/Target Support Files/Pods-mvvm+Rx/Pods-mvvm+Rx.debug.xcconfig"; sourceTree = "<group>"; };
 		834B7B1E5F8D0E20A3C81699 /* Pods_mvvm_Rx.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mvvm_Rx.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC352E322130C57900C7FC6C /* SignInRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInRepositoryImpl.swift; sourceTree = "<group>"; };
+		AC352E332130C57900C7FC6C /* SignInRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInRepository.swift; sourceTree = "<group>"; };
+		AC352E382130CBEF00C7FC6C /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		AC352E3A2130CBEF00C7FC6C /* LoginView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginView.xib; sourceTree = "<group>"; };
 		AC38507C210FD65B00AE5217 /* mvvm+Rx.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "mvvm+Rx.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC38507F210FD65B00AE5217 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AC385081210FD65B00AE5217 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -32,6 +46,12 @@
 		AC385092210FDC7C00AE5217 /* DefaultContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultContainer.swift; sourceTree = "<group>"; };
 		AC385095210FDD5900AE5217 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		AC385097210FDD7400AE5217 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		AC50C060212E371600D9EF34 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		AC50C061212E371600D9EF34 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		AC50C062212E371600D9EF34 /* HomeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeView.xib; sourceTree = "<group>"; };
+		ACE5799B2122506B00359477 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		ACE5799F2122509900359477 /* AuthRouterImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRouterImpl.swift; sourceTree = "<group>"; };
+		ACE579A221225D5900359477 /* RX+NSObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RX+NSObject.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +72,34 @@
 				834B7B1E5F8D0E20A3C81699 /* Pods_mvvm_Rx.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AC352E312130C10D00C7FC6C /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				AC352E322130C57900C7FC6C /* SignInRepositoryImpl.swift */,
+				AC352E332130C57900C7FC6C /* SignInRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		AC352E362130CBBC00C7FC6C /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				AC50C060212E371600D9EF34 /* HomeView.swift */,
+				AC50C061212E371600D9EF34 /* HomeViewModel.swift */,
+				AC50C062212E371600D9EF34 /* HomeView.xib */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		AC352E372130CBCD00C7FC6C /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				AC352E382130CBEF00C7FC6C /* LoginView.swift */,
+				AC352E3A2130CBEF00C7FC6C /* LoginView.xib */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 		AC385073210FD65B00AE5217 = {
@@ -75,8 +123,12 @@
 		AC38507E210FD65B00AE5217 /* mvvm+Rx */ = {
 			isa = PBXGroup;
 			children = (
+				ACE579A121225D3400359477 /* RxExtensions */,
+				ACE5799A2122504800359477 /* Service */,
+				AC352E312130C10D00C7FC6C /* Repository */,
 				AC385094210FDD3A00AE5217 /* Coordinator */,
 				AC385091210FDC5D00AE5217 /* Container */,
+				AC50C05D212E302300D9EF34 /* Modules */,
 				AC38507F210FD65B00AE5217 /* AppDelegate.swift */,
 				AC385081210FD65B00AE5217 /* ViewController.swift */,
 				AC385083210FD65B00AE5217 /* Main.storyboard */,
@@ -102,6 +154,32 @@
 				AC385097210FDD7400AE5217 /* AppCoordinator.swift */,
 			);
 			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		AC50C05D212E302300D9EF34 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				AC352E372130CBCD00C7FC6C /* Login */,
+				AC352E362130CBBC00C7FC6C /* Home */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		ACE5799A2122504800359477 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				ACE5799B2122506B00359477 /* AuthService.swift */,
+				ACE5799F2122509900359477 /* AuthRouterImpl.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		ACE579A121225D3400359477 /* RxExtensions */ = {
+			isa = PBXGroup;
+			children = (
+				ACE579A221225D5900359477 /* RX+NSObject.swift */,
+			);
+			path = RxExtensions;
 			sourceTree = "<group>";
 		};
 		FA85515BE0C1919B8970547B /* Pods */ = {
@@ -174,7 +252,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC38508A210FD65E00AE5217 /* LaunchScreen.storyboard in Resources */,
+				AC50C065212E371600D9EF34 /* HomeView.xib in Resources */,
 				AC385087210FD65E00AE5217 /* Assets.xcassets in Resources */,
+				AC352E3D2130CBEF00C7FC6C /* LoginView.xib in Resources */,
 				AC385085210FD65B00AE5217 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -207,10 +287,12 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-mvvm+Rx/Pods-mvvm+Rx-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FacebookCore/FacebookCore.framework",
+				"${BUILT_PRODUCTS_DIR}/FacebookLogin/FacebookLogin.framework",
 				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
-				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwiftExt/RxSwiftExt.framework",
@@ -219,10 +301,12 @@
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookLogin.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwiftExt.framework",
@@ -241,9 +325,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC50C063212E371600D9EF34 /* HomeView.swift in Sources */,
 				AC385096210FDD5900AE5217 /* Coordinator.swift in Sources */,
 				AC385082210FD65B00AE5217 /* ViewController.swift in Sources */,
+				AC50C064212E371600D9EF34 /* HomeViewModel.swift in Sources */,
 				AC385098210FDD7400AE5217 /* AppCoordinator.swift in Sources */,
+				AC352E352130C57900C7FC6C /* SignInRepository.swift in Sources */,
+				ACE579A321225D5900359477 /* RX+NSObject.swift in Sources */,
+				AC352E342130C57900C7FC6C /* SignInRepositoryImpl.swift in Sources */,
+				ACE579A02122509900359477 /* AuthRouterImpl.swift in Sources */,
+				ACE5799C2122506B00359477 /* AuthService.swift in Sources */,
+				AC352E3B2130CBEF00C7FC6C /* LoginView.swift in Sources */,
 				AC385080210FD65B00AE5217 /* AppDelegate.swift in Sources */,
 				AC385093210FDC7C00AE5217 /* DefaultContainer.swift in Sources */,
 			);

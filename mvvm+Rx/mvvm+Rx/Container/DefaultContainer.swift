@@ -8,7 +8,6 @@
 
 import Foundation
 import Swinject
-import Moya
 import Rswift
 
 final class DefaultContainer {
@@ -27,10 +26,14 @@ final class DefaultContainer {
 //Register Views
 extension DefaultContainer {
     func registerViews() {
-        
+       
+        self.container.register(HomeView.self) { resolver in
+            HomeView(
+                //posts repository
+            )
+        }
         
     }
-    
 }
 
 //Register Services
@@ -40,11 +43,7 @@ extension DefaultContainer {
         
     }
     
-    func getDefaultPlugins() -> [PluginType] {
-        
-        return [NetworkLoggerPlugin(verbose: true)]
-        
-    }
+ 
 }
 
 

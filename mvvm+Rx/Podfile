@@ -5,12 +5,15 @@ target 'mvvm+Rx' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
 
+# ignore all warnings from all pods
+inhibit_all_warnings!
+
   # Pods for mvvm+Rx
 
 pod 'R.swift'
 
   #RxSwift
-pod 'Moya/RxSwift'
+  #pod 'Moya/RxSwift'
 pod 'RxSwift'
 pod 'RxCocoa'
 pod 'RxSwiftUtilities'
@@ -19,6 +22,8 @@ pod 'RxSwiftExt'
 #Swinject
 pod 'Swinject'
 
+#Facebook Login
+pod 'FacebookLogin'
 
 end
 

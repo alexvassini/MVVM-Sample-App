@@ -8,6 +8,8 @@
 
 import UIKit
 
+import FBSDKCoreKit
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
@@ -18,15 +20,29 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
-        self.defaultContainer = DefaultContainer()
+        FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
         
-        let currentWindow = UIWindow(frame: UIScreen.main.bounds)
-        self.appCoordinator = AppCoordinator(window: currentWindow, container: defaultContainer.container)
-        self.appCoordinator?.start()
-        self.window = currentWindow
-        self.window?.makeKeyAndVisible()
+//        self.defaultContainer = DefaultContainer()
+//
+//        let currentWindow = UIWindow(frame: UIScreen.main.bounds)
+//        self.appCoordinator = AppCoordinator(window: currentWindow, container: defaultContainer.container)
+//        self.appCoordinator?.start()
+//        self.window = currentWindow
+//        self.window?.makeKeyAndVisible()
         
         return true
+    }
+    
+    func verifyOpendURL(_ application: UIApplication, openURL url: URL, options: [UIApplicationOpenURLOptionsKey: Any], annotation: AnyObject?) -> Bool {
+        let sourceApplication = options[UIApplicationOpenURLOptionsKey.sourceApplication] as? String
+        debugPrint(url.scheme, sourceApplication, annotation)
+        
+        
+        if FBSDKApplicationDelegate.sharedInstance().application(application, open: url, sourceApplication: sourceApplication, annotation: annotation) {
+            return true
+        }
+        
+        return false
     }
     
 }
