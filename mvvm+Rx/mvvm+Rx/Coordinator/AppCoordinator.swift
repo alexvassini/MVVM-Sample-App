@@ -44,11 +44,23 @@ class AppCoordinator: Coordinator {
         self.currentView = view
     }
     
-    
+    fileprivate func showLoginView(){
+        let view = container.resolve(LoginView.self)!
+        view.delegate = self
+        self.currentView = view
+    }
 }
 
 extension AppCoordinator: HomeViewDelegate {
+    func openLogin() {
+        showLoginView()
+    }
+}
 
+extension AppCoordinator: LoginViewDelegate {
+    func closeLogin() {
+        showHomeView()
+    }
 }
 
 

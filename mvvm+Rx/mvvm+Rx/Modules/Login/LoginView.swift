@@ -19,7 +19,7 @@ import FacebookLogin
  */
 
 protocol LoginViewDelegate: class {
-    
+    func closeLogin()
 }
 
 class LoginView: UIViewController {
@@ -27,8 +27,10 @@ class LoginView: UIViewController {
     @IBOutlet weak var loginButton: UIButton!
     
     weak var delegate: LoginViewDelegate?
-
-    init() {
+    let repository: SignInRepository
+    
+    init(repository: SignInRepository) {
+        self.repository = repository
         super.init(nibName: String(describing: LoginView.self), bundle: nil)
     }
     
@@ -53,7 +55,7 @@ extension LoginView {
     
     func setupBindings() {
         
-        self.loginButton.rx.tap.bind { _ in
+        self.loginButton.rx.tap.bind {
             let loginManager = LoginManager()
             loginManager.logIn(readPermissions: [.publicProfile, .userGender, .custom("groups_access_member_info"), .custom("pages_show_list")], viewController: self, completion: { loginResult in
                 switch loginResult {
@@ -62,10 +64,11 @@ extension LoginView {
                 case .cancelled:
                     print("User cancelled login.")
                 case .success:
-                   self.dismiss(animated: true, completion: nil)
+                   self.delegate?.closeLogin()
                     print("Logged in!")
                 }
             })
+           // viewModel.getFacebookId()
             
             }.disposed(by: rx.disposeBag)
 

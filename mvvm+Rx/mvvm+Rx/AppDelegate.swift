@@ -22,13 +22,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
         
-//        self.defaultContainer = DefaultContainer()
-//
-//        let currentWindow = UIWindow(frame: UIScreen.main.bounds)
-//        self.appCoordinator = AppCoordinator(window: currentWindow, container: defaultContainer.container)
-//        self.appCoordinator?.start()
-//        self.window = currentWindow
-//        self.window?.makeKeyAndVisible()
+        self.defaultContainer = DefaultContainer()
+
+        let currentWindow = UIWindow(frame: UIScreen.main.bounds)
+        self.appCoordinator = AppCoordinator(window: currentWindow, container: defaultContainer.container)
+        self.appCoordinator?.start()
+        self.window = currentWindow
+        self.window?.makeKeyAndVisible()
         
         return true
     }

@@ -28,8 +28,12 @@ extension DefaultContainer {
     func registerViews() {
        
         self.container.register(HomeView.self) { resolver in
-            HomeView(
-                //posts repository
+            HomeView()
+        }
+        
+        self.container.register(LoginView.self) { resolver in
+            LoginView(
+                repository: resolver.resolve(SignInRepository.self)!
             )
         }
         
@@ -40,6 +44,11 @@ extension DefaultContainer {
 extension DefaultContainer {
     
     func registerServices() {
+        
+        self.container.register(AuthService.self){ _ in
+            //let provider = MoyaProvider<AuthRouter>(plugins: self.getDefaultPlugins())
+            return AuthServiceImpl()
+        }
         
     }
     
@@ -60,6 +69,13 @@ extension DefaultContainer {
 extension DefaultContainer {
     
     func registerRepositories() {
+        
+        self.container.register(SignInRepository.self) { resolver in
+            SignInRepositoryImpl(
+                service: resolver.resolve(AuthService.self)!
+            )
+            
+        }
         
     }
     

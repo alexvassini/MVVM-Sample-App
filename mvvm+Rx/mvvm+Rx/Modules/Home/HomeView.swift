@@ -19,7 +19,7 @@ import RxCocoa
 
 
 protocol HomeViewDelegate: class {
-    
+    func openLogin()
 }
 
 class HomeView: UIViewController {
@@ -60,7 +60,9 @@ extension HomeView {
     }
     
     func setupBindings() {
-
+        loginButton.rx.tap.bind{
+            self.delegate?.openLogin()
+        }.disposed(by: rx.disposeBag)
     }
 }
 

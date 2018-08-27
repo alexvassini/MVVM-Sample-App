@@ -8,12 +8,9 @@
 
 import RxSwift
 
-//self.register(SignInRepository.self) { resolver in
-//    SignInRepositoryImpl(
-//        service: resolver.resolve(<#ServiceName#>.self)!
-//    )
-//}
+
 
 protocol SignInRepository: class {
     
+     func getFacebookId() -> Single<Bool>
 }
