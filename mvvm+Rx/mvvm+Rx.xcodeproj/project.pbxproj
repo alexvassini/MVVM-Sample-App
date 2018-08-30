@@ -17,6 +17,7 @@
 		AC352E462134CF5D00C7FC6C /* PostTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC352E442134CF5D00C7FC6C /* PostTableViewCell.xib */; };
 		AC352E492137743700C7FC6C /* JSONExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC352E482137743700C7FC6C /* JSONExtension.swift */; };
 		AC352E4B213792DD00C7FC6C /* FeedAttachments.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC352E4A213792DD00C7FC6C /* FeedAttachments.swift */; };
+		AC352E4E2137A1D100C7FC6C /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC352E4D2137A1D100C7FC6C /* R.generated.swift */; };
 		AC385080210FD65B00AE5217 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC38507F210FD65B00AE5217 /* AppDelegate.swift */; };
 		AC385082210FD65B00AE5217 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC385081210FD65B00AE5217 /* ViewController.swift */; };
 		AC385085210FD65B00AE5217 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC385083210FD65B00AE5217 /* Main.storyboard */; };
@@ -46,6 +47,7 @@
 		AC352E442134CF5D00C7FC6C /* PostTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostTableViewCell.xib; sourceTree = "<group>"; };
 		AC352E482137743700C7FC6C /* JSONExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONExtension.swift; sourceTree = "<group>"; };
 		AC352E4A213792DD00C7FC6C /* FeedAttachments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedAttachments.swift; sourceTree = "<group>"; };
+		AC352E4D2137A1D100C7FC6C /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		AC38507C210FD65B00AE5217 /* mvvm+Rx.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "mvvm+Rx.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC38507F210FD65B00AE5217 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AC385081210FD65B00AE5217 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -178,6 +180,7 @@
 				AC38507F210FD65B00AE5217 /* AppDelegate.swift */,
 				AC385081210FD65B00AE5217 /* ViewController.swift */,
 				AC385083210FD65B00AE5217 /* Main.storyboard */,
+				AC352E4D2137A1D100C7FC6C /* R.generated.swift */,
 				AC385086210FD65E00AE5217 /* Assets.xcassets */,
 				AC385088210FD65E00AE5217 /* LaunchScreen.storyboard */,
 				AC38508B210FD65E00AE5217 /* Info.plist */,
@@ -246,6 +249,7 @@
 			buildConfigurationList = AC38508E210FD65E00AE5217 /* Build configuration list for PBXNativeTarget "mvvm+Rx" */;
 			buildPhases = (
 				152A4FB71023FA0010563197 /* [CP] Check Pods Manifest.lock */,
+				AC352E4C2137A16F00C7FC6C /* R.Swift */,
 				AC385078210FD65B00AE5217 /* Sources */,
 				AC385079210FD65B00AE5217 /* Frameworks */,
 				AC38507A210FD65B00AE5217 /* Resources */,
@@ -366,6 +370,20 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-mvvm+Rx/Pods-mvvm+Rx-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		AC352E4C2137A16F00C7FC6C /* R.Swift */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = R.Swift;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT\"\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -384,6 +402,7 @@
 				ACE579A321225D5900359477 /* RX+NSObject.swift in Sources */,
 				AC352E412134C39E00C7FC6C /* FacebookFeed.swift in Sources */,
 				AC352E342130C57900C7FC6C /* SignInRepositoryImpl.swift in Sources */,
+				AC352E4E2137A1D100C7FC6C /* R.generated.swift in Sources */,
 				ACE579A02122509900359477 /* AuthRouterImpl.swift in Sources */,
 				ACE5799C2122506B00359477 /* AuthService.swift in Sources */,
 				AC352E4B213792DD00C7FC6C /* FeedAttachments.swift in Sources */,

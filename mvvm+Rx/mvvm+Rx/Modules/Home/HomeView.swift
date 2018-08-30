@@ -41,7 +41,7 @@ class HomeView: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.configureViews()
+        //self.configureViews()
         self.setupViewModel()
         self.setupBindings()
     }
@@ -53,11 +53,21 @@ extension HomeView {
     func setupViewModel() {
         self.viewModel = HomeViewModel()
         self.viewModel.request()
+        viewModel.onResponse = { success in
+            if success {
+                self.tableView.reloadData()
+                self.configureViews()
+            }
+        }
     }
     
     func configureViews() {
+        tableView.register(R.nib.postTableViewCell)
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.separatorStyle = .none
+        tableView.estimatedRowHeight = 400
+        tableView.rowHeight = UITableViewAutomaticDimension
     }
     
     func setupBindings() {
@@ -70,11 +80,18 @@ extension HomeView {
 extension HomeView: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return self.viewModel.facebookFeed?.posts.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.postTableViewCell, for: indexPath) as! PostTableViewCell
+        let post = viewModel.facebookFeed?.posts[indexPath.row]
+        let attachments = viewModel.facebookAttachments?.data[indexPath.row].attachments
+       
+        cell.configureCell(post!, attachments  )
+        
+        return cell
     }
     
 }
