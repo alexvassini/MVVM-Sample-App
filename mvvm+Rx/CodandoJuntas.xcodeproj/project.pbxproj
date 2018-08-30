@@ -48,7 +48,7 @@
 		AC352E482137743700C7FC6C /* JSONExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONExtension.swift; sourceTree = "<group>"; };
 		AC352E4A213792DD00C7FC6C /* FeedAttachments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedAttachments.swift; sourceTree = "<group>"; };
 		AC352E4D2137A1D100C7FC6C /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
-		AC38507C210FD65B00AE5217 /* mvvm+Rx.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "mvvm+Rx.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC38507C210FD65B00AE5217 /* CodandoJuntas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CodandoJuntas.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC38507F210FD65B00AE5217 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AC385081210FD65B00AE5217 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		AC385084210FD65B00AE5217 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -161,7 +161,7 @@
 		AC38507D210FD65B00AE5217 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				AC38507C210FD65B00AE5217 /* mvvm+Rx.app */,
+				AC38507C210FD65B00AE5217 /* CodandoJuntas.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -244,9 +244,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		AC38507B210FD65B00AE5217 /* mvvm+Rx */ = {
+		AC38507B210FD65B00AE5217 /* CodandoJuntas */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AC38508E210FD65E00AE5217 /* Build configuration list for PBXNativeTarget "mvvm+Rx" */;
+			buildConfigurationList = AC38508E210FD65E00AE5217 /* Build configuration list for PBXNativeTarget "CodandoJuntas" */;
 			buildPhases = (
 				152A4FB71023FA0010563197 /* [CP] Check Pods Manifest.lock */,
 				AC352E4C2137A16F00C7FC6C /* R.Swift */,
@@ -259,9 +259,9 @@
 			);
 			dependencies = (
 			);
-			name = "mvvm+Rx";
+			name = CodandoJuntas;
 			productName = "mvvm+Rx";
-			productReference = AC38507C210FD65B00AE5217 /* mvvm+Rx.app */;
+			productReference = AC38507C210FD65B00AE5217 /* CodandoJuntas.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -276,10 +276,15 @@
 				TargetAttributes = {
 					AC38507B210FD65B00AE5217 = {
 						CreatedOnToolsVersion = 9.4.1;
+						SystemCapabilities = {
+							com.apple.InAppPurchase = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
-			buildConfigurationList = AC385077210FD65B00AE5217 /* Build configuration list for PBXProject "mvvm+Rx" */;
+			buildConfigurationList = AC385077210FD65B00AE5217 /* Build configuration list for PBXProject "CodandoJuntas" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -292,7 +297,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				AC38507B210FD65B00AE5217 /* mvvm+Rx */,
+				AC38507B210FD65B00AE5217 /* CodandoJuntas */,
 			);
 		};
 /* End PBXProject section */
@@ -560,7 +565,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.vassini.mvvm-Rx";
+				PRODUCT_BUNDLE_IDENTIFIER = com.vassini.CodandoJuntasAlpha;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -579,7 +584,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.vassini.mvvm-Rx";
+				PRODUCT_BUNDLE_IDENTIFIER = com.vassini.CodandoJuntasAlpha;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -589,7 +594,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		AC385077210FD65B00AE5217 /* Build configuration list for PBXProject "mvvm+Rx" */ = {
+		AC385077210FD65B00AE5217 /* Build configuration list for PBXProject "CodandoJuntas" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AC38508C210FD65E00AE5217 /* Debug */,
@@ -598,7 +603,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AC38508E210FD65E00AE5217 /* Build configuration list for PBXNativeTarget "mvvm+Rx" */ = {
+		AC38508E210FD65E00AE5217 /* Build configuration list for PBXNativeTarget "CodandoJuntas" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AC38508F210FD65E00AE5217 /* Debug */,
