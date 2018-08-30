@@ -52,6 +52,7 @@ extension HomeView {
     
     func setupViewModel() {
         self.viewModel = HomeViewModel()
+        self.viewModel.request()
     }
     
     func configureViews() {

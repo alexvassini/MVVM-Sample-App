@@ -12,6 +12,11 @@
 		AC352E352130C57900C7FC6C /* SignInRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC352E332130C57900C7FC6C /* SignInRepository.swift */; };
 		AC352E3B2130CBEF00C7FC6C /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC352E382130CBEF00C7FC6C /* LoginView.swift */; };
 		AC352E3D2130CBEF00C7FC6C /* LoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC352E3A2130CBEF00C7FC6C /* LoginView.xib */; };
+		AC352E412134C39E00C7FC6C /* FacebookFeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC352E402134C39E00C7FC6C /* FacebookFeed.swift */; };
+		AC352E452134CF5D00C7FC6C /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC352E432134CF5D00C7FC6C /* PostTableViewCell.swift */; };
+		AC352E462134CF5D00C7FC6C /* PostTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC352E442134CF5D00C7FC6C /* PostTableViewCell.xib */; };
+		AC352E492137743700C7FC6C /* JSONExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC352E482137743700C7FC6C /* JSONExtension.swift */; };
+		AC352E4B213792DD00C7FC6C /* FeedAttachments.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC352E4A213792DD00C7FC6C /* FeedAttachments.swift */; };
 		AC385080210FD65B00AE5217 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC38507F210FD65B00AE5217 /* AppDelegate.swift */; };
 		AC385082210FD65B00AE5217 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC385081210FD65B00AE5217 /* ViewController.swift */; };
 		AC385085210FD65B00AE5217 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC385083210FD65B00AE5217 /* Main.storyboard */; };
@@ -36,6 +41,11 @@
 		AC352E332130C57900C7FC6C /* SignInRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInRepository.swift; sourceTree = "<group>"; };
 		AC352E382130CBEF00C7FC6C /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		AC352E3A2130CBEF00C7FC6C /* LoginView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginView.xib; sourceTree = "<group>"; };
+		AC352E402134C39E00C7FC6C /* FacebookFeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookFeed.swift; sourceTree = "<group>"; };
+		AC352E432134CF5D00C7FC6C /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
+		AC352E442134CF5D00C7FC6C /* PostTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostTableViewCell.xib; sourceTree = "<group>"; };
+		AC352E482137743700C7FC6C /* JSONExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONExtension.swift; sourceTree = "<group>"; };
+		AC352E4A213792DD00C7FC6C /* FeedAttachments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedAttachments.swift; sourceTree = "<group>"; };
 		AC38507C210FD65B00AE5217 /* mvvm+Rx.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "mvvm+Rx.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC38507F210FD65B00AE5217 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AC385081210FD65B00AE5217 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -77,8 +87,7 @@
 		AC352E312130C10D00C7FC6C /* Repository */ = {
 			isa = PBXGroup;
 			children = (
-				AC352E322130C57900C7FC6C /* SignInRepositoryImpl.swift */,
-				AC352E332130C57900C7FC6C /* SignInRepository.swift */,
+				AC352E3E2134B52900C7FC6C /* SignInRepository */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -102,6 +111,41 @@
 			path = Login;
 			sourceTree = "<group>";
 		};
+		AC352E3E2134B52900C7FC6C /* SignInRepository */ = {
+			isa = PBXGroup;
+			children = (
+				AC352E322130C57900C7FC6C /* SignInRepositoryImpl.swift */,
+				AC352E332130C57900C7FC6C /* SignInRepository.swift */,
+			);
+			path = SignInRepository;
+			sourceTree = "<group>";
+		};
+		AC352E3F2134C37600C7FC6C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AC352E402134C39E00C7FC6C /* FacebookFeed.swift */,
+				AC352E4A213792DD00C7FC6C /* FeedAttachments.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		AC352E422134CE7100C7FC6C /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				AC352E432134CF5D00C7FC6C /* PostTableViewCell.swift */,
+				AC352E442134CF5D00C7FC6C /* PostTableViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		AC352E472137741200C7FC6C /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				AC352E482137743700C7FC6C /* JSONExtension.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		AC385073210FD65B00AE5217 = {
 			isa = PBXGroup;
 			children = (
@@ -123,6 +167,8 @@
 		AC38507E210FD65B00AE5217 /* mvvm+Rx */ = {
 			isa = PBXGroup;
 			children = (
+				AC352E472137741200C7FC6C /* Utils */,
+				AC352E3F2134C37600C7FC6C /* Model */,
 				ACE579A121225D3400359477 /* RxExtensions */,
 				ACE5799A2122504800359477 /* Service */,
 				AC352E312130C10D00C7FC6C /* Repository */,
@@ -159,6 +205,7 @@
 		AC50C05D212E302300D9EF34 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				AC352E422134CE7100C7FC6C /* Cells */,
 				AC352E372130CBCD00C7FC6C /* Login */,
 				AC352E362130CBBC00C7FC6C /* Home */,
 			);
@@ -254,6 +301,7 @@
 				AC38508A210FD65E00AE5217 /* LaunchScreen.storyboard in Resources */,
 				AC50C065212E371600D9EF34 /* HomeView.xib in Resources */,
 				AC385087210FD65E00AE5217 /* Assets.xcassets in Resources */,
+				AC352E462134CF5D00C7FC6C /* PostTableViewCell.xib in Resources */,
 				AC352E3D2130CBEF00C7FC6C /* LoginView.xib in Resources */,
 				AC385085210FD65B00AE5217 /* Main.storyboard in Resources */,
 			);
@@ -327,14 +375,18 @@
 			files = (
 				AC50C063212E371600D9EF34 /* HomeView.swift in Sources */,
 				AC385096210FDD5900AE5217 /* Coordinator.swift in Sources */,
+				AC352E452134CF5D00C7FC6C /* PostTableViewCell.swift in Sources */,
 				AC385082210FD65B00AE5217 /* ViewController.swift in Sources */,
 				AC50C064212E371600D9EF34 /* HomeViewModel.swift in Sources */,
+				AC352E492137743700C7FC6C /* JSONExtension.swift in Sources */,
 				AC385098210FDD7400AE5217 /* AppCoordinator.swift in Sources */,
 				AC352E352130C57900C7FC6C /* SignInRepository.swift in Sources */,
 				ACE579A321225D5900359477 /* RX+NSObject.swift in Sources */,
+				AC352E412134C39E00C7FC6C /* FacebookFeed.swift in Sources */,
 				AC352E342130C57900C7FC6C /* SignInRepositoryImpl.swift in Sources */,
 				ACE579A02122509900359477 /* AuthRouterImpl.swift in Sources */,
 				ACE5799C2122506B00359477 /* AuthService.swift in Sources */,
+				AC352E4B213792DD00C7FC6C /* FeedAttachments.swift in Sources */,
 				AC352E3B2130CBEF00C7FC6C /* LoginView.swift in Sources */,
 				AC385080210FD65B00AE5217 /* AppDelegate.swift in Sources */,
 				AC385093210FDC7C00AE5217 /* DefaultContainer.swift in Sources */,

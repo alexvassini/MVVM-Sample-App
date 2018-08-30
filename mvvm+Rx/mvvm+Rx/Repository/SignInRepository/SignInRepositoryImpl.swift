@@ -20,7 +20,6 @@ class SignInRepositoryImpl: SignInRepository {
     
     func getFacebookId() -> Single<Bool> {
         return self.service.facebookLogin()
-        
     }
     
 }
